@@ -3,6 +3,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
@@ -18,6 +19,7 @@ body {
     background: url('daisy.png') no-repeat center center;
     background-size: contain;
     position: relative;
+    margin: 20px 0;
 }
 
 .petal {
