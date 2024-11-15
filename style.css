@@ -6,14 +6,21 @@ body {
     flex-direction: column;
     height: 100vh;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+
+    background: #a1f68b; /* Color de fondo del cielo */
+    background-image: 
+        radial-gradient(circle at 20% 20%, #fff, rgba(255, 255, 255, 0) 50%),
+        radial-gradient(circle at 80% 30%, #fff, rgba(255, 255, 255, 0) 50%),
+        radial-gradient(circle at 50% 50%, #fff, rgba(255, 255, 255, 0) 50%),
+        radial-gradient(circle at 30% 70%, #fff, rgba(255, 255, 255, 0) 50%),
+        radial-gradient(circle at 70% 80%, #fff, rgba(255, 255, 255, 0) 50%);
 }
 
 .double-size {
     background-color: yellow;
     font-weight: bold;
-    padding: 5px;
-    border-radius: 5px;
+    font-size: 4rem; /* Aumenta el tamaño de la fuente */
 }
 
 .container {
@@ -25,23 +32,18 @@ body {
     height: 100%;
 }
 
-#daisy-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
 
 .daisy {
     width: 200px;
     height: 200px;
-    background: url('daisy.png') no-repeat center center;
+    /* background: url('daisy.png') no-repeat center center; */
     background-size: contain;
     position: relative;
     margin: 20px 0;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .petal {
@@ -68,6 +70,10 @@ body {
     background: yellow; /* Color de fondo para el centro de la margarita */
     border-radius: 50%; /* Hace que el elemento sea circular */
     border: 2px solid black; /* Añade un borde negro de 2px */
-    position: absolute; /* Posiciona el elemento en el centro del contenedor */
     z-index: 1; /* Asegura que el centro esté por encima de los pétalos */
+}
+
+#name {
+    font-family: 'Roboto', sans-serif;
+    color: #333; /* Ajusta el color según tus preferencias */
 }

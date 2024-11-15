@@ -22,11 +22,13 @@ function removePetal() {
         const randomIndex = Math.floor(Math.random() * petals.length);
         daisy.removeChild(petals[randomIndex]);
         petalCount--;
-        document.getElementById('countdown').innerText = petalCount;
         toggleName();
 
         if (petalCount === 0) {
             document.getElementById('name').classList.add('double-size');
+            daisy.remove(); // Elimina el elemento daisy
+            document.getElementById('name').innerText ='¡Vera!';
+
         }
     }
 }
