@@ -1,0 +1,30 @@
+/* style.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.daisy {
+    width: 200px;
+    height: 200px;
+    background: url('daisy.png') no-repeat center center;
+    background-size: contain;
+    position: relative;
+}
+
+.petal {
+    position: absolute;
+    width: 20px;
+    height: 60px;
+    background: yellow;
+    border-radius: 10px;
+    transform-origin: bottom center;
+}
