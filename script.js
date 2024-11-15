@@ -1,5 +1,5 @@
 // script.js
-let petalCount = 10;
+let petalCount = 50;
 let currentName = 'Vera';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -7,7 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < petalCount; i++) {
         const petal = document.createElement('div');
         petal.className = 'petal';
-        petal.style.transform = `rotate(${i * (360 / petalCount)}deg) translateY(-100px)`;
+        if (i === petalCount - 1) {
+            petal.classList.add('last-petal'); // Añade una clase específica al último pétalo
+        }
+        petal.style.transform = `rotate(${i * (360 / petalCount)}deg) translateY(-70%)`;
         daisy.appendChild(petal);
     }
 });
@@ -15,11 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
 function removePetal() {
     const daisy = document.getElementById('daisy');
     if (petalCount > 0) {
-        daisy.removeChild(daisy.lastChild);
+        const petals = daisy.getElementsByClassName('petal');
+        const randomIndex = Math.floor(Math.random() * petals.length);
+        daisy.removeChild(petals[randomIndex]);
         petalCount--;
         document.getElementById('countdown').innerText = petalCount;
         toggleName();
-        
     }
 }
 

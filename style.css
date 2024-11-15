@@ -10,7 +10,19 @@ body {
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    height: 100%;
+}
+
+#daisy-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .daisy {
@@ -20,13 +32,32 @@ body {
     background-size: contain;
     position: relative;
     margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .petal {
     position: absolute;
     width: 20px;
-    height: 60px;
-    background: yellow;
-    border-radius: 10px;
-    transform-origin: bottom center;
+    height: 80px;
+    background: none; /* Cambia el color de fondo a blanco */
+    border-radius: 50% 50% 0 0; /* Deforma el pétalo para que tenga una parte superior redondeada y una parte inferior puntiaguda */
+    transform-origin:  center;
+    border: 2px solid black; /* Añade un borde negro de 2px */
+    transform: scaleX(1.2); /* Escala el pétalo horizontalmente para darle una forma más triangular */
+}
+
+.last-petal {
+    background: none; /* Elimina el fondo del último pétalo */
+}
+
+.center {
+    width: 50px; /* Ajusta el tamaño según sea necesario */
+    height: 50px; /* Ajusta el tamaño según sea necesario */
+    background: yellow; /* Color de fondo para el centro de la margarita */
+    border-radius: 50%; /* Hace que el elemento sea circular */
+    border: 2px solid black; /* Añade un borde negro de 2px */
+    position: absolute; /* Posiciona el elemento en el centro del contenedor */
+    z-index: 1; /* Asegura que el centro esté por encima de los pétalos */
 }
