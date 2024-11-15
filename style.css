@@ -41,7 +41,7 @@ body {
     position: absolute;
     width: 20px;
     height: 80px;
-    background: none; /* Cambia el color de fondo a blanco */
+    background: whitesmoke; /* Cambia el color de fondo a blanco */
     border-radius: 50% 50% 0 0; /* Deforma el pétalo para que tenga una parte superior redondeada y una parte inferior puntiaguda */
     transform-origin:  center;
     border: 2px solid black; /* Añade un borde negro de 2px */
@@ -49,7 +49,9 @@ body {
 }
 
 .last-petal {
-    background: none; /* Elimina el fondo del último pétalo */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* Degradado de blanco a transparente */
+    border: 2px solid black; /* Mantiene el borde negro */
+    border-radius: 50% 50% 0 0; /* Mantiene la forma redondeada */
 }
 
 .center {
