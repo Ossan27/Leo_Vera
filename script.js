@@ -1,5 +1,5 @@
 // script.js
-let petalCount = 50;
+let petalCount = 14;
 let currentName = 'Vera';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -24,6 +24,10 @@ function removePetal() {
         petalCount--;
         document.getElementById('countdown').innerText = petalCount;
         toggleName();
+
+        if (petalCount === 0) {
+            document.getElementById('name').classList.add('double-size');
+        }
     }
 }
 

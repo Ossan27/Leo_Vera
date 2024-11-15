@@ -9,6 +9,13 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.double-size {
+    background-color: yellow;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -42,16 +49,17 @@ body {
     width: 20px;
     height: 80px;
     background: whitesmoke; /* Cambia el color de fondo a blanco */
-    border-radius: 50% 50% 0 0; /* Deforma el pétalo para que tenga una parte superior redondeada y una parte inferior puntiaguda */
+    border-radius: 50% 50% 50% 60%; /* Deforma el pétalo para que tenga una parte superior redondeada y una parte inferior puntiaguda */
     transform-origin:  center;
     border: 2px solid black; /* Añade un borde negro de 2px */
     transform: scaleX(1.2); /* Escala el pétalo horizontalmente para darle una forma más triangular */
+    z-index: ;
 }
 
 .last-petal {
+    @extend .petal;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* Degradado de blanco a transparente */
-    border: 2px solid black; /* Mantiene el borde negro */
-    border-radius: 50% 50% 0 0; /* Mantiene la forma redondeada */
+    z-index: 0; /* Asegura que .last-petal esté detrás de los otros pétalos */
 }
 
 .center {
