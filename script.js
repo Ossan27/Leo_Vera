@@ -7,9 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < petalCount; i++) {
         const petal = document.createElement('div');
         petal.className = 'petal';
-        if (i === petalCount - 1) {
-            petal.classList.add('last-petal'); // Añade una clase específica al último pétalo
-        }
         petal.style.transform = `rotate(${i * (360 / petalCount)}deg) translateY(-70%)`;
         daisy.appendChild(petal);
     }
