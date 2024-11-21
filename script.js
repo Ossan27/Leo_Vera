@@ -17,16 +17,20 @@ function removePetal() {
     if (petalCount > 0) {
         const petals = daisy.getElementsByClassName('petal');
         const randomIndex = Math.floor(Math.random() * petals.length);
-        daisy.removeChild(petals[randomIndex]);
-        petalCount--;
+        const petal = petals[randomIndex];
+        petal.classList.add('petal-fade-grow');
         toggleName();
+        petal.addEventListener('animationend', () => {
+            daisy.removeChild(petal);
+            petalCount--;
+           
 
-        if (petalCount === 0) {
-            document.getElementById('name').classList.add('double-size');
-            daisy.remove(); // Elimina el elemento daisy
-            document.getElementById('name').innerText ='¡Vera!';
-
-        }
+            if (petalCount === 0) {
+                document.getElementById('name').classList.add('double-size');
+                daisy.remove(); // Elimina el elemento daisy
+                document.getElementById('name').innerText = '¡Vera!';
+            }
+        }, { once: true }); // El evento se ejecutará solo una vez
     }
 }
 
