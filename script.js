@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     var audio = document.getElementById('background-audio');
+    audio.src = 'heartbeat.mp3';
     audio.play();
     audio.playbackRate = 0.7;
 });
