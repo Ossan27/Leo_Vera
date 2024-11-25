@@ -25,16 +25,16 @@ function removePetal() {
             petalCount--;
            
 
-            if (petalCount === 0) {
-                document.getElementById('name').classList.add('double-size');
-                daisy.remove(); // Elimina el elemento daisy
-                document.getElementById('name').innerText = '¡Vera!';
-            }
-        }, { once: true }); // El evento se ejecutará solo una vez
+        if (petalCount === 0) {
+            document.getElementById('name').classList.add('double-size');
+            daisy.remove(); // Elimina el elemento daisy
+            document.getElementById('name').innerText ='¡Leo!';
+
+        }
     }
 }
 
 function toggleName() {
-    currentName = currentName === 'Vera' ? 'Leo' : 'Vera';
+    currentName = currentName === 'Leo' ? 'Vera' : 'Leo';
     document.getElementById('name').innerText = currentName;
 }
