@@ -10,6 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
         petal.style.transform = `rotate(${i * (360 / petalCount)}deg) translateY(-70%)`;
         daisy.appendChild(petal);
     }
+
+    var audio = document.getElementById('background-audio');
+    audio.play();
+    audio.playbackRate = 0.7;
 });
 
 function removePetal() {
@@ -47,9 +51,4 @@ function toggleName() {
     document.getElementById('name').innerText = currentName;
 }
 
-window.addEventListener('load', function() {
-    var audio = document.getElementById('background-audio');
-    audio.play();
-    audio.playbackRate = 0.7;
 
-});
