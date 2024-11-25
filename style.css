@@ -57,18 +57,6 @@ body {
     transform: scaleX(1.2); /* Escala el pétalo horizontalmente para darle una forma más triangular */
 }
 
-@keyframes fadeAndGrow {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-.petal-fade-grow {
-    animation: fadeAndGrow 0.5s forwards;
-}
 
 .center {
     width: 50px; /* Ajusta el tamaño según sea necesario */

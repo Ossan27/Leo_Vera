@@ -1,6 +1,6 @@
 // script.js
 let petalCount = 14;
-let currentName = 'Vera';
+let currentName = 'Leo';
 
 document.addEventListener('DOMContentLoaded', () => {
     const daisy = document.getElementById('daisy');
@@ -19,19 +19,17 @@ function removePetal() {
         const randomIndex = Math.floor(Math.random() * petals.length);
         const petal = petals[randomIndex];
         petal.classList.add('petal-fade-grow');
-        toggleName();
-        petal.addEventListener('animationend', () => {
-            daisy.removeChild(petal);
-            petalCount--;
-           
+        toggleName(); 
+        daisy.removeChild(petal);
+        petalCount--;   
 
         if (petalCount === 0) {
             document.getElementById('name').classList.add('double-size');
             daisy.remove(); // Elimina el elemento daisy
             document.getElementById('name').innerText ='¡Leo!';
 
-        }
-    }
+        }   
+}
 }
 
 function toggleName() {
